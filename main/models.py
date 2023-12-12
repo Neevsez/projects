@@ -75,22 +75,35 @@ class Shooting:
 
 
 def Main() -> any:
-    f1 = "z"
-    f2 = "-x - y"
-    x0 = 0
-    nu = [1, -1]
-    a0 = 1
-    b0 = 0
-    a1 = 1
-    b1 = 0
-    A = 0
-    B = 0
-    a = 0
-    b = 1
-    obj = Shooting(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, 0.01)
-    y, z = obj.Data()
-    print(y[::10], z[::10], sep="\n\n")
-
+    q = 1
+    p = 0
+    k = 1
+    while True:
+        f1 = "z"
+        f2 = f"-1 + 0.49 * {q ** 2} - 0.98 * {q} * z"
+        x0 = 0
+        nu = [1, -1]
+        a0 = 1
+        b0 = 0
+        a1 = 1
+        b1 = 0
+        A = 0
+        B = 0
+        a = 0
+        b = 1
+        obj = Shooting(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, 0.01)
+        y, z = obj.Data()
+        # print(y[::10], z[::10], sep="\n\n")
+        for i in range(0, len(y), 10):
+            print(k, i / 100, y[i], z[i], sep="\t")
+        q = z[k]
+        p = y[k]
+        ans = input(": ")
+        if ans == "":
+            k += 10
+            continue
+        else: 
+            break
 
 if __name__ == "__main__":
     Main()
