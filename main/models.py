@@ -74,7 +74,7 @@ class Shooting:
         return self.x, y, z
 
 
-def test(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p):
+def Сondition(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p):
     Y = [[0 for i in range(int(1 / e) + 1)]]
 
     k = 1

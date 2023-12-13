@@ -1,10 +1,7 @@
 from django.shortcuts import render
-from .models import Shooting, test
-import sympy as sp
+from .models import *
 
 # Create your views here.
-
-
 def index(request):
     return render(request, "index.html")
 
@@ -27,6 +24,6 @@ def result(request):
     q = float(request.GET["q"])
     p = float(request.GET["p"])
     
-    d = test(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p)
+    d = Сondition(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p)
 
     return render(request, 'result.html', {"data": d})
