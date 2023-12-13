@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Shooting
+from .models import Shooting, test
 import sympy as sp
 
 # Create your views here.
@@ -10,6 +10,7 @@ def index(request):
 
 
 def result(request):
+
     f1 = str(request.GET["f1"])
     f2 = str(request.GET["f2"])
     x0 = int(request.GET["x0"])
@@ -25,6 +26,7 @@ def result(request):
     e = float(request.GET["e"])
     q = float(request.GET["q"])
     p = float(request.GET["p"])
-    obj = Shooting(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e)
-    y, z = obj.Data()
-    return render(request, 'result.html', {"func": y})
+    
+    d = test(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p)
+
+    return render(request, 'result.html', {"data": d})

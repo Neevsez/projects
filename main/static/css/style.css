@@ -1,0 +1,24 @@
+.columns {
+    border: 2px solid black;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 10px 5px;
+}
+.up_row
+{
+    border-bottom: 2px solid black;
+}
+.x_column {
+    border-right: none;
+}
+
+.z_column {
+    border-left: none;
+}
+
+tbody {
+    display: flex;
+}
