@@ -9,7 +9,7 @@ def index(request):
     return render(request, "index.html")
 
 
-def test(request):
+def result(request):
     f1 = str(request.GET["f1"])
     f2 = str(request.GET["f2"])
     x0 = int(request.GET["x0"])
@@ -27,4 +27,4 @@ def test(request):
     p = float(request.GET["p"])
     obj = Shooting(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e)
     y, z = obj.Data()
-    return render(request, 'index.html', {"func": y})
+    return render(request, 'result.html', {"func": y})
