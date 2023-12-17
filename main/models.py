@@ -112,47 +112,24 @@ def Сondition(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p, koef = 0):
 
 
 def Main() -> any:
-    q = 0
+    q = 12
     p = 0
-    l = 1
-    k = 1
-    Y = [[0 for i in range(101)]]
-    flag = True
-    while flag:
-        f1 = "z"
-        f2 = f"-1 + 0.49 * {q ** 2} - 0.98 * {q} * z"
-        x0 = 0
-        nu = [1, -1]
-        a0 = 1
-        b0 = 0
-        a1 = 1
-        b1 = 0
-        A = 0
-        B = 0
-        a = 0
-        b = 1
-        obj = Shooting(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, 0.01)
-        x, y, z = obj.Data()
-        q = z[k]
-        p = y[k]
-        Y.append(y)
-        for i in y[::10]:
-            print(i)
-        for i in range(len(Y[l])):
-            if i == len(Y[l]) - 1:
-                flag = False
-            if abs(Y[l][i] - Y[l - 1][i]) < 0.01:
-                continue
-            else:
-                break
-        ans = input(": ")
-        if ans == "":
-            l += 1
-            k += 10
-            continue
-        else:
-            break
-
+    k = 0
+    f1 = "z"
+    f2 = "-1 + 0.49 * (q ** 2) - 0.98 * (q) * z"
+    x0 = 0
+    nu = [1, -1]
+    a0 = 1
+    b0 = 0
+    a1 = 1
+    b1 = 0
+    A = 0
+    B = 0
+    a = 0
+    b = 1
+    e = 0.01
+    d = Сondition(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p, k)
+    print(d)
 
 if __name__ == "__main__":
     Main()
