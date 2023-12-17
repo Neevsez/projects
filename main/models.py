@@ -136,9 +136,10 @@ def Main() -> any:
         q = z[k]
         p = y[k]
         Y.append(y)
+        for i in y[::10]:
+            print(i)
         for i in range(len(Y[l])):
             if i == len(Y[l]) - 1:
-                print(y[::10])
                 flag = False
             if abs(Y[l][i] - Y[l - 1][i]) < 0.01:
                 continue
