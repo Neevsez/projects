@@ -3,7 +3,7 @@
 {% block body %}
 <div class="container">
     <main class="main">
-        <form action="{% url 'result' %}", class="article" method="get">
+        <form action="{% url 'result' %}" , class="article" method="get">
             <div class="form">
                 <div class="label_box">
                     <label for="f1">f1</label>
@@ -12,9 +12,7 @@
                     <label for="nu1">nu1</label>
                     <label for="nu2">nu2</label>
                     <label for="a0">a0</label>
-                    <label for="b0">b0</label>
                     <label for="a1">a1</label>
-                    <label for="b1">b1</label>
                     <label for="A">A</label>
                     <label for="B">B</label>
                     <label for="a">a</label>
@@ -22,6 +20,7 @@
                     <label for="e">e</label>
                     <label for="q">q</label>
                     <label for="p">p</label>
+                    <label for="k">k</label>
                 </div>
                 <div class="input_box">
                     <input name="f1" type="text" class="input" id="f1">
@@ -30,9 +29,7 @@
                     <input name="nu1" type="text" class="input" id="nu1">
                     <input name="nu2" type="text" class="input" id="nu2">
                     <input name="a0" type="text" class="input" id="a0">
-                    <input name="b0" type="text" class="input" id="b0">
                     <input name="a1" type="text" class="input" id="a1">
-                    <input name="b1" type="text" class="input" id="b1">
                     <input name="A" type="text" class="input" id="A">
                     <input name="B" type="text" class="input" id="B">
                     <input name="a" type="text" class="input" id="a">
@@ -40,6 +37,7 @@
                     <input name="e" type="text" class="input" id="e">
                     <input name="q" type="text" class="input" id="q">
                     <input name="p" type="text" class="input" id="p">
+                    <input name="k" type="text" class="input" id="k">
                 </div>
             </div>
             <div class="button_box">
@@ -52,22 +50,13 @@
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
+                            Метод квазилинеаризации на основе метода стрельбы и метода Эйлера
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting
-                            that just about any HTML can go within the <code>.accordion-body</code>, though the
-                            transition
-                            does limit overflow.
+                            <strong>Метод квазилинеаризации</strong> Теория...
                         </div>
                     </div>
                 </div>
@@ -75,23 +64,13 @@
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
+                            Метод стрельбы на основе метода Эйлера
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting
-                            that just about any HTML can go within the <code>.accordion-body</code>, though the
-                            transition
-                            does limit overflow.
+                            <strong>Метод стрельбы</strong> Теория...
                         </div>
                     </div>
                 </div>
@@ -99,22 +78,13 @@
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            Метод Эйлера
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting
-                            that just about any HTML can go within the <code>.accordion-body</code>, though the
-                            transition
-                            does limit overflow.
+                            <strong>Метод Эйлера</strong> Теория...
                         </div>
                     </div>
                 </div>

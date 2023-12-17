@@ -57,7 +57,12 @@ label
     height: 0;
 }
 
-
+.table 
+{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
 .columns {
     border: 2px solid black;
 }
@@ -69,6 +74,7 @@ label
 }
 .up_row
 {
+    text-align: center;
     border-bottom: 2px solid black;
 }
 .x_column {

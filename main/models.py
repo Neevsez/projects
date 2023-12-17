@@ -74,7 +74,7 @@ class Shooting:
         return self.x, y, z
 
 
-def Сondition(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p):
+def Сondition(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p, koef = 0):
     Y = [[0 for i in range(int(1 / e) + 1)]]
 
     k = 1
@@ -83,6 +83,7 @@ def Сondition(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p):
     while flag:
         f2_n = sp.simplify(f2)
         f2_n = f2_n.subs("q", q)
+        f2_n = f2_n.subs("p", p)
         f2_n = str(f2_n)
         obj = Shooting(f1, f2_n, x0, nu, a0, b0, a1, b1, A, B, a, b, e)
         x, y, z = obj.Data()
@@ -99,10 +100,13 @@ def Сondition(f1, f2, x0, nu, a0, b0, a1, b1, A, B, a, b, e, q, p):
                 break
         l += 1
         k += int(1 / (e * 10))
+    
+    if koef == 0:
+        koef = int(1 / (e * 10))
     d = {
-        "x": x[::int(1 / (e * 10))],
-        "y": y[::int(1 / (e * 10))],
-        "z": z[::int(1 / (e * 10))],
+        "x": x[::koef],
+        "y": y[::koef],
+        "z": z[::koef],
     }
     return d
 
